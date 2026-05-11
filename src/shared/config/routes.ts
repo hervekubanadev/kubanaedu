@@ -21,6 +21,9 @@ export const primaryNavigationRoutes = [
   routes.settings,
 ] as const
 
+export const publicRoutes = [routes.authLogin] as const
+export const protectedRoutes = primaryNavigationRoutes
+
 export type PrimaryNavigationRoute = (typeof primaryNavigationRoutes)[number]
 
 export const defaultAppRoute: PrimaryNavigationRoute = routes.dashboard
